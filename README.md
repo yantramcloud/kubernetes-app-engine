@@ -19,6 +19,7 @@ In this project, we create and configure a postgres deployment using terraform a
 
 ### How do I get run?
 * run terraform.sh to deploy your terraform configurations.
+* run destroy.sh to destroy your terraform configurations.
 
 
 ### Contribution guidelines ###
