@@ -1,5 +1,6 @@
 # kubernetes-terraform-monitor
-# README #
+All code has been tested against a minikube cluster.
+change the provider.tf to configure your cluster.
 In this project, we create and configure a postgres deployment using terraform and then monitor that with prometheus.
 
 * Deploy a PostgresSQL 
