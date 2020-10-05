@@ -1,28 +1,28 @@
 # kubernetes-terraform-monitor
 # README #
-In this project, we create and configure kubernetes deployments using terraform.
-* Deploy a postgressql 
-* Deploy prometheus monitoring using helm charts.
+In this project, we create and configure a postgres deployment using terraform and then monitor that with prometheus.
+
+* Deploy a PostgresSQL 
+* Deploy Prometheus monitoring.
+* Deploy PostgreSQL-Exporter.
 * Configure prometheus operator to scrape postgres.
-* Use Grafana dashboard to visualize sql stats. .
+* Use Grafana dashboard to visualize stats. .
 
 * Version - 0.01
 
 ### How do I get set up? ###
+* Install terraform on your instance. 
+* clone this repo.
 
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+# Components #
+* run terraform.sh to deploy your terraform configurations.
+
+### How do I get run?
+* run terraform.sh to deploy your terraform configurations.
+
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* jayant@yantram.cloud

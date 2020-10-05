@@ -1,0 +1,9 @@
+# Default values for prometheus-postgres-exporter.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates
+
+serviceMonitor:
+  # When set true then use a ServiceMonitor to configure scraping
+  enabled: true
+  additionalLabels:
+    release: prometheus

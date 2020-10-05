@@ -1,0 +1,10 @@
+# Terraform state and generated configurations
+
+/configurations/.terraform.tfstate.lock.info
+/configurations/terraform.tfstate
+/configurations/terraform.tfstate.backup
+/prometheus-postgres/.terraform/
+
+
+# Various IDEs
+.idea/
