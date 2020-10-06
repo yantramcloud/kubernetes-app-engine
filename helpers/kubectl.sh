@@ -7,7 +7,7 @@
 #list all the nodes running. remember if you are running minicube, there will be only one node which will act both and master and worker node
 #echo 'Get Help on kubectl \n'
 #kubectl -h
-kubectl config view
+#kubectl config view
 echo 'Listing all the Nodes'
 echo '#####################################################################################'
 kubectl get nodes
@@ -54,13 +54,14 @@ echo '\n'
 ##kubectl edit deployment mysql-1600416151
 echo 'installed_helm_charts'
 echo '#####################################################################################'
-helm ls
+#helm ls
 #helm repo update
 #echo '\n'
 #echo 'Debug a kubernetes pod -- log in to application terminal and then look inside \n'
 #kubectl logs mysql-1600416151-689d49c5fb-wzh4h
-helm show values prometheus-community/prometheus-postgres-exporter > yantram-postgresql-exporter.yaml
-kubectl describe servicemonitor yantram-postgresql-exporter-prometheus-postgres-exporter  > yantram-postgresql-exporter_created.yaml
+#helm show values prometheus-community/prometheus-postgres-exporter > yantram-postgresql-exporter.yaml
+kubectl get servicemonitor yantram-postgresql-exporter-prometheus-postgres-exporter
+
 
 
 
