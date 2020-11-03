@@ -1,0 +1,3 @@
+
+To count the number of returned time series, you could write:
+count(prometheus_target_interval_length_seconds)
