@@ -1,0 +1,43 @@
+{
+  "namespace": "yantram",
+  "chart_configurations": {
+    "postgresql": {
+      "name": "postgresql",
+      "chart": "postgresql",
+      "chart_values": "inputs/app/yantram-postgresql.yaml",
+      "repository": "https://charts.bitnami.com/bitnami",
+      "create_namespace": false
+    },
+    "prometheus-postgres-exporter": {
+      "name": "prometheus-postgres-exporter",
+      "chart": "prometheus-postgres-exporter",
+      "chart_values": "inputs/exporters/yantram-prometheus-postgres-exporter.yaml",
+      "repository": "https://prometheus-community.github.io/helm-charts",
+      "create_namespace": false
+    }
+  },
+  "grafana_folders": {
+    "grafana_dashboard_folder": {
+      "grafana_dashboard_folder": "yantram"
+    }
+  },
+  "grafana_data_sources": {
+    "postgresql": {
+      "name": "postgresql",
+      "type": "postgres",
+      "url": "yantram-postgresql:5432",
+      "username": "postgres",
+      "password": "postgres",
+      "database": "postgres"
+    }
+  },
+  "grafana_dashboards": {
+    "postgresql_dashboard": {
+      "grafana_dashboard_path": "inputs/dashboards/9106-postgresql_rev1.json"
+    }
+  }
+}
+
+
+
+

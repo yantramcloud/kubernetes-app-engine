@@ -1,0 +1,1 @@
+ansible-playbook  invoke.yml  -vvv  -e '@resources/gcp_enterprisevm_cleanup.yml'

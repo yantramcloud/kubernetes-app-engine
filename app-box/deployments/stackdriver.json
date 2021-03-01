@@ -1,0 +1,11 @@
+{
+  "namespace": "yantram",
+   "chart_configurations": {
+    "yantram-mongo-express":{
+      "name": "yantram-prometheus-stackdriver",
+      "chart": "mongo-express",
+      "chart_values": "../inputs/yantram-prometheus-stackdriver-exporter.yaml",
+      "repository": "https://prometheus-community.github.io/helm-charts"
+    }
+  }
+}

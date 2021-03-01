@@ -1,6 +1,0 @@
-serviceMonitor:
-  additionalLabels:
-    release: prometheus
-
-  labels:
-    release: prometheus

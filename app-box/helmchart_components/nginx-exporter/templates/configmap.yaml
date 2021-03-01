@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: setup-script
+data:
+  setup.sh: |
+    echo "test1"
+    apt-get update -y
+    apt-get install -y gnupg2 curl apt-transport-https gnupg2 curl git
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yantram-app-engine
+spec:
+  selector:
+    matchLabels:
+      app: yantram-app-engine
+  template:
+    metadata:
+      labels:
+        app: yantram-app-engine
+    spec:
+      volumes:
+      - name: setup-script
+        configMap:
+          name: setup-script
+          defaultMode: 0777
+      containers:
+      - name: yantram-app-engine
+        image: nginx
+        command: ["/bin/bash", "./setup-script/setup.sh"]
+        volumeMounts:
+          - mountPath: /setup-script
+            name: setup-script

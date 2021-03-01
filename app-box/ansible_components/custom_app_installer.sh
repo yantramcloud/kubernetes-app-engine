@@ -1,0 +1,1 @@
+ansible-playbook  invoke.yml  -vvv  -e '@resources/gcp_compute_provision.yml' -KK

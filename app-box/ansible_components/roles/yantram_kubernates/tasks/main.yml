@@ -1,0 +1,16 @@
+---
+- name: Include default extension files in vars/services (2.2)
+  include_vars:
+    dir: ../vars/kubernates
+#    depth: 2
+  tags:
+    - always
+
+#- import_tasks: gcp/gcp_network_configurations.yml
+#- import_tasks: gcp/gcp_disk_configurations.yml
+#- import_tasks: gcp/gcp_compute_configurations.yml
+#- import_tasks: gcp/vm_compute_post.yml
+#- import_tasks: gcp_load_balancer_configurations.yml
+#- import_tasks: app_installer.yml
+#- import_tasks: gcp/gcp_pubsub_topic.yml
+

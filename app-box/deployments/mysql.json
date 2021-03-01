@@ -1,0 +1,24 @@
+{
+  "namespace": "yantram",
+  "config_context_cluster": "minikube",
+  "config_path": "/home/rashmi/.kube/config",
+  "kubeconfigurations": {
+    "namespace": "yantram",
+    "config_context_cluster": "minikube",
+    "config_path": "/home/rashmi/.kube/config"
+  },
+  "chart_configurations": {
+    "yantram-postgresql": {
+      "name": "yantram-postgresql",
+      "chart": "postgresql",
+      "chart_values": "../inputs/yantram-postgresql.yaml",
+      "repository": "https://charts.bitnami.com/bitnami"
+    },
+    "yantram-prometheus-postgres-exporter": {
+      "name": "yantram-prometheus-postgres-exporter",
+      "chart": "prometheus-mongodb-exporter",
+      "chart_values": "../inputs/yantram-prometheus-postgres-exporter.yaml",
+      "repository": "https://prometheus-community.github.io/helm-charts"
+    }
+  }
+}

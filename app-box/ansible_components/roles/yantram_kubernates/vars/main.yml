@@ -1,0 +1,6 @@
+---
+# vars file for webapp_yantram
+# Google Compute Engine required authentication global variables
+# (Replace 'YOUR_PROJECT_ID' with the Project ID used in creating your GCP project.)
+
+client: yantram

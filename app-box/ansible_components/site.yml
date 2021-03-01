@@ -1,0 +1,25 @@
+
+---
+# ansible compute implementation
+# - import_playbook: component_playbooks/gcp_compute_configurations.yml
+# - import_playbook: ansible_components/playbooks/role_base.yml
+#- import_playbook: playbooks/role_base.yml
+#- import_playbook: playbooks/app_installer.yml
+#- import_playbook: playbooks/pub_sub_base.yml
+- name: Ansible Google Compute Engine Applications
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - include_vars:
+        dir: vars/
+        depth: 1
+    - import_tasks: roles/yantram_kubernates/tasks/main.yml
+    - import_tasks: roles/yantram_kubernates/tasks/main.yml
+
+
+        #- import_playbook: playbooks/app_installer.yml
+#    - include: geerlingguy.docker wp_user=timmy
+#    - include: wordpress.yml wp_user=alice
+#    - include: wordpress.yml wp_user=bob
+
+
