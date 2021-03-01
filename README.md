@@ -112,28 +112,23 @@ Following are the components of your deployment configurations.
    * kubectl 2.27.0
 
 ### Setup: 
-  * Installation
-    * Manual :
-      * on an ubuntu machine install setup.sh.
-    * kubernetes deployment
-        * run kubectl appy -f [deployment.yaml](https://github.com/geerlingguy/ansible-role-awx)  
-    * helm
-        * helm install  [yantram-app-helmchart](https://github.com/geerlingguy/ansible-role-awx)  
+  * Installation :
+```
+kubectl appy -f [deployment.yaml](https://github.com/yantramcloud/kubernetes-app-engine/blob/master/app-box/components/kubernetes_components/custom/install.sh)  
+```
 
-#### Run : 
-   * console: python3 execute.py
+### Run: 
+```
+python3 execute.py
+```
 
 ### Further development ###
 
-In case you want to add a new role , add that as part of requirement.yam under roles directory. AWX will automatically pick up
-the changes and download the role in repo path.
+TBD
 
 ### Known bugs ###
 
-* AWX Installation: A AWX installation setup has a bug where it  fails if you run the installation with preload data.
-[Link](https://github.com/ansible/awx/issues/8863#issuecomment-748591827) for more info.
-
-Also, Galaxy credentials are manadory during organization setup else the role download does not work.
+TBD.
 
 ### Who do I talk to? ###
 
