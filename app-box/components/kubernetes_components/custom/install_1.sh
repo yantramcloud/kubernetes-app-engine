@@ -6,7 +6,7 @@ kubectl apply -f deployment.yaml
 kubectl get pod
 
 kubectl exec --stdin --tty yantram-app-engine-65ddc49c67-bwmzm  -- /bin/bash
-kubectl logs yantram-app-engine-65ddc49c67-bwmzm --follow
+kubectl logs yantram-app-engine-6466cdbd5d-kvhft --follow
 
 apt-get update -y
 apt-get install -y gnupg2 software-properties-common curl apt-transport-https gnupg2 curl git

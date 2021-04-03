@@ -1,10 +1,10 @@
 {
-  "namespace": "yantram",
+  "namespace": "(((count(count(node_cpu_seconds_total{instance=\"192.168.99.178:9100\",job=\"node-exporter\"}) by (cpu))) - avg(sum by (mode)(irate(node_cpu_seconds_total{mode='idle',instance=\"192.168.99.178:9100\",job=\"node-exporter\"}[5m])))) * 100) / count(count(node_cpu_seconds_total{instance=\"192.168.99.178:9100\",job=\"node-exporter\"}) by (cpu))\n",
    "chart_configurations": {
     "yantram-mongo-express":{
       "name": "yantram-prometheus-stackdriver",
       "chart": "mongo-express",
-      "chart_values": "../inputs/yantram-prometheus-stackdriver-exporter.yaml",
+      "chart_values": "inputs/helm_chart_values/app/yantram-prometheus-stackdriver-exporter.yaml",
       "repository": "https://prometheus-community.github.io/helm-charts"
     }
   }

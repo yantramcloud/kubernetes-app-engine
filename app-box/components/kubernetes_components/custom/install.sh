@@ -1,4 +1,3 @@
-echo "test1"
 apt-get update -y
 apt-get install -y gnupg2 software-properties-common curl apt-transport-https gnupg2 curl git
 

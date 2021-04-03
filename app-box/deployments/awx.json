@@ -1,0 +1,15 @@
+{
+  "namespace": "yantram",
+  "chart_configurations": {
+    "awx": {
+      "name": "awx",
+      "chart": "awx",
+      "repository": "https://adwerx.github.io/charts",
+      "chart_values": "inputs/helm_chart_values/app/yantram-awx.yaml",
+      "create_namespace": false
+    }
+  }
+}
+
+
+

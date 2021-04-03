@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-script
+  name: yantram-app-engine-script
 data:
-  test.sh: |
+  setup.sh: |
     echo "test1"
     export DEBIAN_FRONTEND=noninteractive
     apt-get update -y
@@ -21,27 +21,26 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test
+  name: yantram-app-engine
 spec:
   selector:
     matchLabels:
-      app: test
+      app: yantram-app-engine
   template:
     metadata:
       labels:
-        app: test
+        app: yantram-app-engine
     spec:
       volumes:
-      - name: test-script
+      - name: yantram-app-engine-script
         configMap:
-          name: test-script
+          name: yantram-app-engine-script
           defaultMode: 0777
       containers:
       - command:
-        - sh
-        - /test-script/test.sh
+        - ./yantram-app-engine-script/setup.sh
         image: ubuntu
-        name: locust
+        name: yantram-app-engine
         volumeMounts:
-          - mountPath: /test-script
-            name: test-script
+          - mountPath: /yantram-app-engine-script
+            name: yantram-app-engine-script

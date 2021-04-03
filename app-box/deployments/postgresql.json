@@ -4,14 +4,14 @@
     "postgresql": {
       "name": "postgresql",
       "chart": "postgresql",
-      "chart_values": "inputs/app/yantram-postgresql.yaml",
+      "chart_values": "inputs/helm_chart_values/app/yantram-postgresql.yaml",
       "repository": "https://charts.bitnami.com/bitnami",
       "create_namespace": false
     },
     "prometheus-postgres-exporter": {
       "name": "prometheus-postgres-exporter",
       "chart": "prometheus-postgres-exporter",
-      "chart_values": "inputs/exporters/yantram-prometheus-postgres-exporter.yaml",
+      "chart_values": "inputs/helm_chart_values/exporters/yantram-prometheus-postgres-exporter.yaml",
       "repository": "https://prometheus-community.github.io/helm-charts",
       "create_namespace": false
     }

@@ -11,7 +11,7 @@
     "yantram-postgresql": {
       "name": "yantram-postgresql",
       "chart": "postgresql",
-      "chart_values": "../inputs/yantram-postgresql.yaml",
+      "chart_values": "inputs/helm_chart_values/app/yantram-mysql.yaml",
       "repository": "https://charts.bitnami.com/bitnami"
     },
     "yantram-prometheus-postgres-exporter": {

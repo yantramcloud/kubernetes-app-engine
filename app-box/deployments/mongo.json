@@ -4,7 +4,7 @@
     "yantram_mongodb": {
       "name": "mongodb",
       "chart": "mongodb",
-      "chart_values": "inputs/app/yantram-mongodb.yaml",
+      "chart_values": "inputs/helm_chart_values/app/yantram-mongodb.yaml",
       "repository": "https://charts.bitnami.com/bitnami",
       "create_namespace": false
 
@@ -12,7 +12,7 @@
     "yantram-prometheus-mongodb-exporter": {
       "name": "prometheus-mongodb-exporter",
       "chart": "prometheus-mongodb-exporter",
-      "chart_values": "inputs/exporters/yantram-prometheus-mongodb-exporter.yaml",
+      "chart_values": "inputs/helm_chart_values/exporters/yantram-prometheus-mongodb-exporter.yaml",
       "repository": "https://prometheus-community.github.io/helm-charts",
       "create_namespace": false
 

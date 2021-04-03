@@ -11,3 +11,7 @@ mv ./kind ~/tools/kind
 curl https://raw.githubusercontent.com/hashicorp/learn-terraform-deploy-nginx-kubernetes-provider/master/kind-config.yaml --output kind-config.yaml
 
 
+sudo docker login --username=jayantkaushal
+sudo docker images
+sudo docker tag 7ea1503bf816 jayantkaushal/yantram:firsttry
+sudo docker push jayantkaushal/yantram:firsttry

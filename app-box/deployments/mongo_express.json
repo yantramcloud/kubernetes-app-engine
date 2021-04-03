@@ -4,7 +4,7 @@
     "yantram-mongo-express": {
       "name": "mongo-express",
       "chart": "mongo-express",
-      "chart_values": "inputs/app/yantram-mongo-express.yaml",
+      "chart_values": "inputs/helm_chart_values/app/yantram-mongo-express.yaml",
       "repository": "https://cowboysysop.github.io/charts",
       "create_namespace": false
     }
